@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from './Button';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import HardCode from "./HardCode";
+import AICode from "./AICode";
+import GPT4ButtonPage from "./GPT4ButtonPage";
+import March1Page from "./March1Page";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header" style={{display:'flex', justifyContent:'space-between', alignItems: 'center'}}>
-      <Button type="primary" size="small">Button</Button>
-      <Button type="secondary" size="medium">Button</Button>
-      <Button type="text" size="large">Button</Button>
-      <Button type="elevated" size="large" disabled>Button</Button>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<HardCode />}></Route>
+          <Route exact path="/ai-code" element={<AICode />}></Route>
+          <Route exact path="/gpt4-code" element={<GPT4ButtonPage />}></Route>
+          <Route exact path="/march1-code" element={<March1Page />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
