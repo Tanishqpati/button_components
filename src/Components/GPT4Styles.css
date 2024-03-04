@@ -1,0 +1,151 @@
+:root {
+  --Primary-Color: #479a6b;
+  --Secondary-Color: #fff;
+  --Hover-Color: #2e8052;
+  --Pressed-Color: #146738;
+  --Disabled-Color: rgba(71, 154, 107, 0.15);
+}
+
+.primary-small,
+.secondary-small,
+.text-small,
+.elevated-small {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.primary-medium,
+.secondary-medium,
+.text-medium,
+.elevated-medium {
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 400;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.primary-large,
+.secondary-large,
+.text-large,
+.elevated-large {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 400;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.primary-small,
+.primary-medium,
+.primary-large {
+  background: var(--Primary-Color);
+  color: var(--Secondary-Color);
+}
+
+.secondary-small,
+.secondary-medium,
+.secondary-large {
+  border: 2px solid var(--Primary-Color);
+  color: var(--Primary-Color);
+}
+
+.text-small,
+.text-medium,
+.text-large {
+  color: var(--Primary-Color);
+}
+
+.elevated-small,
+.elevated-medium,
+.elevated-large {
+  background: var(--Primary-Color);
+  color: var(--Secondary-Color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* hover states */
+.primary-small:hover,
+.primary-medium:hover,
+.primary-large:hover,
+.elevated-small:hover,
+.elevated-medium:hover,
+.elevated-large:hover {
+  background: var(--Hover-Color);
+}
+
+.secondary-small:hover,
+.secondary-medium:hover,
+.secondary-large:hover {
+  background: var(--Disabled-Color);
+  color: var(--Primary-Color);
+}
+
+.text-small:hover,
+.text-medium:hover,
+.text-large:hover {
+  background: var(--Disabled-Color);
+}
+
+/* active or focus states */
+.primary-small:focus,
+.primary-medium:focus,
+.primary-large:focus,
+.secondary-small:focus,
+.secondary-medium:focus,
+.secondary-large:focus,
+.text-small:focus,
+.text-medium:focus,
+.text-large:focus,
+.elevated-small:focus,
+.elevated-medium:focus,
+.elevated-large:focus {
+  background: var(--Pressed-Color);
+  color: var(--Secondary-Color);
+}
+
+.secondary-small:focus,
+.secondary-medium:focus,
+.secondary-large:focus {
+  border: 2px solid var(--Primary-Color);
+  color: var(--Secondary-Color);
+}
+
+/* disabled states */
+.primary-small:disabled,
+.primary-medium:disabled,
+.primary-large:disabled,
+.elevated-small:disabled,
+.elevated-medium:disabled,
+.elevated-large:disabled {
+  background: var(--Disabled-Color);
+  color: var(--Secondary-Color);
+}
+
+.secondary-small:disabled,
+.secondary-medium:disabled,
+.secondary-large:disabled,
+.text-small:disabled,
+.text-medium:disabled,
+.text-large:disabled {
+  color: var(--Disabled-Color);
+}
+
+.disabled {
+  pointer-events: none;
+}
