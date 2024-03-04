@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #A25757;
+  --secondary-color: #ffffff;
+  --button-hover-color: #883E3E;
+  --button-pressed-color: #6F2424;
+  --button-disabled-color: rgba(162, 87, 87, 0.30);
+  --padding-vertical: 0px;
+  --padding-horizontal: 0px;
+  --button-height-small: 40px;
+  --button-height-medium: 48px;
+  --button-height-large: 80px;
+  --button-width-small: 117px;
+  --button-width-medium: 149px;
+  --button-width-large: 200px;
+  --border-radius: 50px;
+  --font-size-small: 20px;
+  --font-size-medium: 28px;
+  --font-size-large: 40px;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --font-family: 'Roboto';
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.button-text {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.button-elevated {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.button-small {
+  font-size: var(--font-size-small);
+  height: var(--button-height-small);
+  width: var(--button-width-small);
+}
+
+.button-medium {
+  font-size: var(--font-size-medium);
+  height: var(--button-height-medium);
+  width: var(--button-width-medium);
+}
+
+.button-large {
+  font-size: var(--font-size-large);
+  height: var(--button-height-large);
+  width: var(--button-width-large);
+}
+
+.button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-primary:hover:not([disabled]) {
+  background-color: var(--button-hover-color);
+}
+
+.button-secondary:hover:not([disabled]) {
+  background-color: var(--button-disabled-color);
+}
+
+.button-text:hover:not([disabled]) {
+  background-color: var(--button-disabled-color);
+}
+
+.button-elevated:hover:not([disabled]) {
+  background-color: var(--button-hover-color);
+}
+
+.button:active:not([disabled]) {
+  background-color: var(--button-pressed-color);
+  color: var(--secondary-color);
+}
