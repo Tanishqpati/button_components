@@ -4,14 +4,14 @@
   --button-hover-color: #883E3E;
   --button-pressed-color: #6F2424;
   --button-disabled-color: rgba(162, 87, 87, 0.30);
-  --padding-vertical: 0px;
-  --padding-horizontal: 0px;
-  --button-height-small: 40px;
-  --button-height-medium: 48px;
-  --button-height-large: 80px;
-  --button-width-small: 117px;
-  --button-width-medium: 149px;
-  --button-width-large: 200px;
+  --padding-vertical: 10px;
+  --padding-horizontal: 20px;
+  --button-height-small: 0px;
+  --button-height-medium: 0px;
+  --button-height-large: 0px;
+  --button-width-small: 0px;
+  --button-width-medium: 0px;
+  --button-width-large: 0px;
   --border-radius: 50px;
   --font-size-small: 20px;
   --font-size-medium: 28px;
@@ -52,7 +52,7 @@
 .button-elevated {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
 }
 
 .button-small {
